@@ -1,0 +1,112 @@
+@keyframes Surgir {
+  0% {
+    opacity: 0%;
+    width: 0%;
+  }
+
+  100% {
+    width: 300px;
+    opacity: 100%;
+  }
+}
+
+@keyframes Rodar {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  33% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes CimaBaixo {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes Tomabadinha {
+  0% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+body {
+  background: rgb(21, 1, 31);
+  background-image: linear-gradient(
+    326deg,
+    rgba(21, 1, 31, 1) 0%,
+    rgba(34, 1, 57, 1) 68%,
+    rgba(63, 5, 71, 1) 100%
+  );
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 390px;
+  height: 844px;
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+}
+
+.imagem {
+  width: 300px;
+  margin: 0px;
+  padding: 0px;
+  animation: Surgir 2s;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(0.1, 0.82, 0.165, 1);
+  display: flex;
+  position: absolute;
+  bottom: 32%;
+  left: 11%;
+}
+.confete {
+  display: flex;
+  position: absolute;
+  top: -8%;
+  left: -1px;
+  animation: CimaBaixo 2s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.confete img {
+  animation: Tomabadinha 1s infinite;
+  animation-timing-function: ;
+  width: 390px;
+}
+
+.imagem img {
+  width: 100%;
+  animation: Rodar 5s infinite;
+  animation-delay: 1s;
+  animation-timing-function: cubic-bezier(0.1, 0.5, 0.01, 1.2);
+}
+.invetido {
+  top: 73%;
+  left: -1px;
+}
