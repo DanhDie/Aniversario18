@@ -64,6 +64,16 @@
   }
 }
 
+@keyframes Piscar {
+  0%,
+  100% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 80%;
+  }
+}
+
 body {
   background: rgb(21, 1, 31);
   background-image: linear-gradient(
@@ -200,4 +210,17 @@ h2 {
   text-align: right;
   font-size: 15px;
   color: rgba(237, 246, 253, 0.659);
+}
+
+.aviso h2 {
+  color: rgba(237, 246, 253, 0.4);
+  font-size: 11px;
+  text-align: center;
+  animation: Piscar 6s infinite;
+}
+.aviso {
+  display: flex;
+  position: absolute;
+  left: 28%;
+  bottom: 25%;
 }
